@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="style.css">
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+        </center>
+    </body>
+    <script>
+         var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg","mom.jpeg", 
+"papa image.jpg", "imageedit_1_3626043381.jpg"];
+                    
+            var names = ["Family Book","Shweta Aggarwal(mom)","Himanshu Aggarwal(dad)","Nalin Aggarwal (son)",];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 3
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+
+    </script>
+</html>
